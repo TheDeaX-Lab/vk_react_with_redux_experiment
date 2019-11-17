@@ -5,13 +5,15 @@ import Settings from "./panels/Settings";
 import panelNames from "./panels/names";
 import { connect } from "react-redux";
 
-function App({ panel }) {
+function App({ panel, popout }) {
   return (
-    <View activePanel={panel}>
+    <View activePanel={panel} popout={popout}>
       <Home id={panelNames.Home} />
       <Settings id={panelNames.Settings} />
     </View>
   );
 }
 
-export default connect(state => ({ panel: state.panel }))(App);
+export default connect(state => ({ panel: state.panel, popout: state.popout }))(
+  App
+);

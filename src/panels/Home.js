@@ -6,10 +6,6 @@ import { Panel, PanelHeader, HeaderButton } from "@vkontakte/vkui";
 import Icon24Settings from "@vkontakte/icons/dist/24/settings";
 
 function App({ id, setActivePanel, access_token, setAccessToken }) {
-  if (access_token) {
-    alert(access_token);
-    setAccessToken("");
-  }
   return (
     <Panel id={id}>
       <PanelHeader
